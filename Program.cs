@@ -43,5 +43,11 @@ if (resp == "1")
 }
 else if (resp == "2")
 {
-    // TODO: parse data file
+    StreamReader sr = new StreamReader("data.txt");
+    String? line;
+    while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+    sr.Close();
 }
